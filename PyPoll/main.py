@@ -25,6 +25,8 @@ with open(csvpath) as csvfile:
     li_v = 0
     otooley_v = 0
     winner = 0
+    win_list = []
+    name_list = []
 
     # Read each row of data after the header
     for row in csvreader:
@@ -40,10 +42,15 @@ with open(csvpath) as csvfile:
         tot_v = tot_v + 1
 
 
+win_list = [khan_v, correy_v, li_v, otooley_v]
+name_list = ["Khan","Correy","Li","O'Tooley"]
+print(win_list)
+print(name_list)
+
 li_percent = round((li_v/ tot_v*100),3)
 otooley_percent = round((otooley_v/tot_v*100),3)
 khan_percent = round((khan_v/tot_v*100),3)
-correy_percent = round(correy_v/tot_v*100),3)
+correy_percent = round((correy_v/tot_v*100),3)
 
 #print(li_percent)
 #print(otooley_percent)
@@ -57,7 +64,9 @@ print(f"------------------------")
 print(f"Total Votes: {tot_v}")
 print(f"------------------------")
 print(f"Khan: {khan_percent}% ({khan_v})")
-print(f"Correy: {correy_percent}% ({correy_v}print(f"Li: {li_percent}% ({li_v})")
+print(f"Correy: {correy_percent}% ({correy_v})")
+print(f"Li: {li_percent}% ({li_v})")
 print(f"O'Tooley: {otooley_percent}% ({otooley_v})")
+print(f"------------------------")
 
 
