@@ -29,6 +29,7 @@ with open(csvpath) as csvfile:
     win_list = []
     name_list = []
     comb_win_list = []
+    percent_list = []
 
     # Read each row of data after the header
     for row in csvreader:
@@ -52,10 +53,13 @@ comb_win_list = zip(name_list, win_list)
 
 #looped through votes to determine winner
 for row in comb_win_list:
+    percent = round(row[1]/tot_v*100,3)
+    percent_list.append(percent)    
     if int(row [1]) > win_v:
         win_name = row [0]
         win_v = row [1]
 
+#dict = {"name":[name_list], "vote_count":[win_list], "percent":[percent_list]}
 
 li_percent = round((li_v/ tot_v*100),3)
 otooley_percent = round((otooley_v/tot_v*100),3)
