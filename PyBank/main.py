@@ -21,6 +21,7 @@ with open(csvpath) as csvfile:
     month_list = []
     pl_list = []
     pl_chng_list = []
+    pl_chng_m_list = []
     tot_pl = 0
     pl_prev = 0
     counter = 0
@@ -45,19 +46,23 @@ with open(csvpath) as csvfile:
             pl_chng = int(row[1]) - int(pl_prev)
             tot_chng = int(pl_chng) + int(tot_chng)
             pl_chng_list.append(pl_chng)
+            pl_chng_m_list.append(row[0])
             pl_prev = int(row[1])
             counter = counter +1
         else: 
             pl_chng = int(row[1]) - int(row[1])
             tot_chng = int(pl_chng) + int(tot_chng)
             pl_chng_list.append(pl_chng)
+            pl_chng_m_list.append(row[0])
             pl_prev = int(row[1])
             counter = counter +1
+
+#comb_pl_list = zip(pl_chng_m_list, pl_chng_list)
 
     for change in pl_chng_list:
         if change > 1 and change > great_inc:
             great_inc = change
-            great_inc_m = change
+            
         elif change <1 and change < great_dec:
             great_dec = change
         
