@@ -80,7 +80,21 @@ tot_months =(len(month_list))
 #to determine the total average change
 tot_avg_chng = round(tot_chng/ (tot_months-1),2)
 
-#to print the analysis
+#to print output to text file
+output_file = os.path.join("pl_analysis.txt")
+
+with open(output_file,"w") as text_file:
+    text_file.write("Financial Analysis \n")
+    text_file.write("----------------- \n")
+    text_file.write("Total Month:  \n")
+    text_file.write("Total : $ \n")
+    text_file.write("Total Average Change $: \n")
+    text_file.write("Greatest Increase in Profits: \n")
+    text_file.write("Greatest Decrease in Profits: \n")
+    text_file.write("----------------- \n")
+    
+    
+#to print the analysis to terminal
 print(f"Financial Analysis")
 print("--------------------------")
 print(f"Total Month: {tot_months}")
@@ -89,6 +103,7 @@ print(f"Average Change: $ {tot_avg_chng}")
 print(f"Greatest Increase in Profits: {great_inc_m} (${great_inc})")
 print(f"Greatest Decrease in Profits: {great_dec_m} (${great_dec})")
 print("--------------------------")
+
 
 #print(great_dec_m)
 #print(great_inc_m)
