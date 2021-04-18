@@ -1,6 +1,12 @@
+#import os module
 import os
+
+#import csv module
 import csv
-    csvpath = os.path.join('..', 'Resources', 'budget_data.csv')
+csvpath = os.path.join( 'Resources', 'budget_data.csv')
+
+
+#read csv data
 with open(csvpath) as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
@@ -14,4 +20,4 @@ with open(csvpath) as csvfile:
 
     # Read each row of data after the header
     for row in csvreader:
-        print(row)
+        print(row[1])
