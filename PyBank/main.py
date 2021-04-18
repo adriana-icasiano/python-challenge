@@ -57,17 +57,17 @@ with open(csvpath) as csvfile:
             pl_prev = int(row[1])
             counter = counter +1
 
-#comb_pl_list = zip(pl_chng_m_list, pl_chng_list)
+comb_pl_list = zip(pl_chng_m_list, pl_chng_list)
 
-    for change in pl_chng_list:
-        if change > 1 and change > great_inc:
-            great_inc = change
-            
-        elif change <1 and change < great_dec:
-            great_dec = change
-        
-print(great_dec)
-print(great_inc)
+for change in comb_pl_list:
+    if int(change[1])> 1 and int(change[1]) > great_inc:
+            great_inc = int(change[1])
+            great_inc_m = change[0]
+    elif int(change[1])< 1 and int(change[1]) < great_dec:
+            great_dec = int(change[1])
+            great_dec_m = change[0]
+
+
 
 #print(pl_chng_list)
 #print(pl_prev) 
@@ -86,6 +86,12 @@ print("--------------------------")
 print(f"Total Month: {tot_months}")
 print(f"Total: $ {tot_pl}")
 print(f"Average Change: $ {tot_avg_chng}")
+print(f"Greatest Increase in Profits: {great_inc_m} (${great_inc})")
+print(f"Greatest Decrease in Profits: {great_dec_m} (${great_dec})")
+print("--------------------------")
+
+#print(great_dec_m)
+#print(great_inc_m)
 
 #print(pl_list)
 #print(month_list)
