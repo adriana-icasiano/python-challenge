@@ -18,6 +18,10 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
 
+    #Declare P_L listing
+    PL_List = []
     # Read each row of data after the header
     for row in csvreader:
-        print(row[1])
+        PL_List.append(row)
+        print(range(len(PL_List)))
+        
