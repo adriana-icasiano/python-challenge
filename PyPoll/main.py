@@ -18,15 +18,17 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     #print(f"CSV Header: {csv_header}")
 
-    #declare variable to track votes
+    #declare variable to track votes and list
     tot_v = 0
     khan_v = 0
     correy_v = 0
     li_v = 0
     otooley_v = 0
-    winner = 0
+    win_v = 0
+    win_name = 0
     win_list = []
     name_list = []
+    comb_win_list = []
 
     # Read each row of data after the header
     for row in csvreader:
@@ -41,24 +43,26 @@ with open(csvpath) as csvfile:
         #to track vote count
         tot_v = tot_v + 1
 
-
+# create list votes and name
 win_list = [khan_v, correy_v, li_v, otooley_v]
 name_list = ["Khan","Correy","Li","O'Tooley"]
-print(win_list)
-print(name_list)
+
+#combined the votes and name list
+comb_win_list = zip(name_list, win_list)
+
+#looped through votes to determine winner
+for row in comb_win_list:
+    if int(row [1]) > win_v:
+        win_name = row [0]
+        win_v = row [1]
+
 
 li_percent = round((li_v/ tot_v*100),3)
 otooley_percent = round((otooley_v/tot_v*100),3)
 khan_percent = round((khan_v/tot_v*100),3)
 correy_percent = round((correy_v/tot_v*100),3)
 
-#print(li_percent)
-#print(otooley_percent)
-#print(khan_v)
-#print(correy_v)
-#print(li_v)
-#print(otooley_v)
-
+print(f"```text")
 print(f"Election Results")
 print(f"------------------------")
 print(f"Total Votes: {tot_v}")
@@ -68,5 +72,6 @@ print(f"Correy: {correy_percent}% ({correy_v})")
 print(f"Li: {li_percent}% ({li_v})")
 print(f"O'Tooley: {otooley_percent}% ({otooley_v})")
 print(f"------------------------")
-
-
+print(f"Winner: {win_name}")
+print(f"------------------------")
+print(f"```")
