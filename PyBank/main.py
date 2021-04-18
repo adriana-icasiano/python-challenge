@@ -86,11 +86,11 @@ output_file = os.path.join("pl_analysis.txt")
 with open(output_file,"w") as text_file:
     text_file.write("Financial Analysis \n")
     text_file.write("----------------- \n")
-    text_file.write("Total Month:  \n")
-    text_file.write("Total : $ \n")
-    text_file.write("Total Average Change $: \n")
-    text_file.write("Greatest Increase in Profits: \n")
-    text_file.write("Greatest Decrease in Profits: \n")
+    text_file.write("Total Month: "+ str(tot_months)+"\n")
+    text_file.write("Total : $"+str(tot_pl)+ "\n")
+    text_file.write("Total Average Change: $"+str(tot_avg_chng)+"\n")
+    text_file.write("Greatest Increase in Profits: "+str(great_inc_m)+" ($"+str(great_inc)+")"+" \n")
+    text_file.write("Greatest Decrease in Profits: "+str(great_dec_m)+" ($"+str(great_dec)+")"+" \n")
     text_file.write("----------------- \n")
     
     
