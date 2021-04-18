@@ -62,6 +62,25 @@ otooley_percent = round((otooley_v/tot_v*100),3)
 khan_percent = round((khan_v/tot_v*100),3)
 correy_percent = round((correy_v/tot_v*100),3)
 
+#to print output to text file
+output_file = os.path.join("pl_analysis.txt")
+
+with open(output_file,"w") as text_file:
+    text_file.write("```text \n")
+    text_file.write("Election Results \n")
+    text_file.write("---------------------- \n")
+    text_file.write("Total Votes: "+ str(tot_v)+"\n")
+    text_file.write("---------------------- \n")
+    text_file.write("Khan: "+str(khan_percent)+ "% ("+str(khan_v)+")\n")
+    text_file.write("Correy: "+str(correy_percent)+ "% ("+str(correy_v)+")\n")
+    text_file.write("Li: "+str(li_percent)+ "% ("+str(li_v)+")\n")
+    text_file.write("O'Tooley: "+str(otooley_percent)+ "% ("+str(otooley_v)+")\n")
+    text_file.write("---------------------- \n")
+    text_file.write("Winner: "+str(win_name)+ "\n")
+    text_file.write("---------------------- \n")
+    text_file.write("```\n")
+
+
 print(f"```text")
 print(f"Election Results")
 print(f"------------------------")
