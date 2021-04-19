@@ -22,10 +22,10 @@ with open(csvpath) as csvfile:
     # pl_list = []
     # pl_chng_list = []
     # pl_chng_m_list = []
-    # tot_pl = 0
-    # pl_prev = 0
-    # counter = 0
-    # tot_chng = 0
+    tot_pl = 0
+    pl_prev = 0
+    counter = 0
+    tot_chng = 0
     # great_inc = 0
     # great_dec = 0
     # great_inc_m = 0
@@ -43,7 +43,7 @@ with open(csvpath) as csvfile:
 
 
     # Create the dictionary for date and pl
-    pl_dict = {"month":[],"pl":[]}
+    pl_dict = {"month":[],"pl":[],"pl_chng":[]}
 
 #     # Declare counter for the index of dict
 #     # pl_counter = 0
@@ -51,12 +51,23 @@ with open(csvpath) as csvfile:
     #Read each row of data after the header
     for row in csvreader:
 
-          pl_dict["month"].append(row [0])
-          pl_dict["pl"].append(row [1])
+        pl_dict["month"].append(row [0])
+        pl_dict["pl"].append(row [1])
         #   pl_counter = int(pl_counter) +1
 # print(f'{pl_dict["month"]}{pl_dict["pl"]}')
 # print(f'{another_actor["name"]} was in {another_actor["best movies"][0]}')
-
+        if counter >= 1:
+            pl_chng = int(row[1]) - int(pl_prev)
+            tot_chng = int(pl_chng) + int(tot_chng)
+            pl_dict["pl_chng"].append(pl_chng)
+            pl_prev = int(row[1])
+            counter = counter +1
+        else: 
+            pl_chng = int(row[1]) - int(row[1])
+            pl_dict["pl_chng"].append(pl_chng)
+            pl_prev = int(row[1])
+            counter = counter +1
+# print(f'month {pl_dict["month"]} P&L {pl_dict["pl"]} PL Change {pl_dict["pl_chng"]}')
 #         #to add to month list and pl list
 #         month_list.append(row[0])
 #         pl_list.append(int(row[1]))
@@ -97,8 +108,8 @@ with open(csvpath) as csvfile:
 # #print(tot_chng)         
 
 
-# #to determine total month
-# tot_months =(len(month_list))
+#to determine total month
+tot_months =(len(pl_dict["month"]))
 
 # #to determine the total average change
 # tot_avg_chng = round(tot_chng/ (tot_months-1),2)
@@ -123,7 +134,7 @@ with open(csvpath) as csvfile:
 # print(f"```text")
 # print(f"Financial Analysis")
 # print("--------------------------")
-# print(f"Total Month: {tot_months}")
+print(f"Total Month: {tot_months}")
 # print(f"Total: $ {tot_pl}")
 # print(f"Average Change: $ {tot_avg_chng}")
 # print(f"Greatest Increase in Profits: {great_inc_m} (${great_inc})")
