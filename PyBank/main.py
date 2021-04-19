@@ -26,10 +26,10 @@ with open(csvpath) as csvfile:
     pl_prev = 0
     counter = 0
     tot_chng = 0
-    # great_inc = 0
-    # great_dec = 0
-    # great_inc_m = 0
-    # great_dec_m = 0
+    great_inc = 0
+    great_dec = 0
+    great_inc_m = 0
+    great_dec_m = 0
 
 # actors = {"name": "Tom Cruise"}
 # print(f'{actors["name"]}')
@@ -53,6 +53,9 @@ with open(csvpath) as csvfile:
 
         pl_dict["month"].append(row [0])
         pl_dict["pl"].append(row [1])
+        
+        # to accumulate total pl
+        tot_pl = tot_pl + int(row[1])
         #   pl_counter = int(pl_counter) +1
 # print(f'{pl_dict["month"]}{pl_dict["pl"]}')
 # print(f'{another_actor["name"]} was in {another_actor["best movies"][0]}')
@@ -62,11 +65,25 @@ with open(csvpath) as csvfile:
             pl_dict["pl_chng"].append(pl_chng)
             pl_prev = int(row[1])
             counter = counter +1
+            if pl_chng > 1 and pl_chng > great_inc:
+                great_inc = pl_chng
+                great_inc_m = row [0]
+
         else: 
             pl_chng = int(row[1]) - int(row[1])
             pl_dict["pl_chng"].append(pl_chng)
             pl_prev = int(row[1])
             counter = counter +1
+
+# print(f"greatest inc {great_inc} month {great_inc_m}")
+
+# if pl_dict["pl_chng"] > 1 and pl_dict["pl_chng"] > great_inc:
+#         great_inc = pl_dict["pl_chng"]
+#         great_inc_m = pl_dict["month"]
+# elif pl_dict["pl_chng"] < 1 and pl_dict["pl_chng"] < great_dec:
+#             great_dec = int(pl_dict["pl_chng"]
+#             great_dec_m = pl_dict["month"]
+
 # print(f'month {pl_dict["month"]} P&L {pl_dict["pl"]} PL Change {pl_dict["pl_chng"]}')
 #         #to add to month list and pl list
 #         month_list.append(row[0])
@@ -111,8 +128,8 @@ with open(csvpath) as csvfile:
 #to determine total month
 tot_months =(len(pl_dict["month"]))
 
-# #to determine the total average change
-# tot_avg_chng = round(tot_chng/ (tot_months-1),2)
+#to determine the total average change
+tot_avg_chng = round(tot_chng/ (tot_months-1),2)
 
 # #to print output to text file
 # output_file = os.path.join("pl_analysis.txt")
@@ -135,8 +152,8 @@ tot_months =(len(pl_dict["month"]))
 # print(f"Financial Analysis")
 # print("--------------------------")
 print(f"Total Month: {tot_months}")
-# print(f"Total: $ {tot_pl}")
-# print(f"Average Change: $ {tot_avg_chng}")
+print(f"Total: $ {tot_pl}")
+print(f"Average Change: $ {tot_avg_chng}")
 # print(f"Greatest Increase in Profits: {great_inc_m} (${great_inc})")
 # print(f"Greatest Decrease in Profits: {great_dec_m} (${great_dec})")
 # print("--------------------------")
