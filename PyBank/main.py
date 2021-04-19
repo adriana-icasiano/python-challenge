@@ -64,7 +64,7 @@ tot_months =(len(pl_dict["month"]))
 tot_avg_chng = round(tot_chng/ (tot_months-1),2)
 
 #to print output to text file
-output_file = os.path.join("pl_analysis.txt")
+output_file = os.path.join("Analysis", "pl_analysis.txt")
 
 with open(output_file,"w") as text_file:
     text_file.write("```text \n")
