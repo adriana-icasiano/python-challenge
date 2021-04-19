@@ -67,7 +67,7 @@ khan_percent = round((khan_v/tot_v*100),3)
 correy_percent = round((correy_v/tot_v*100),3)
 
 #to print output to text file
-output_file = os.path.join("pl_analysis.txt")
+output_file = os.path.join("Analysis", "pl_analysis.txt")
 
 with open(output_file,"w") as text_file:
     text_file.write("```text \n")
