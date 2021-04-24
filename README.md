@@ -28,4 +28,7 @@ Students are tasked with creating a Python script for analyzing the financial re
 * text_file.write() to write into csv file
 * print() to print on terminal
 
+# Screenshot of Terminal#
+
+
 # Part 2 - PyPoll #
