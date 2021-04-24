@@ -1,5 +1,13 @@
 # Python Challenge
 Homework 3 Python Challenge
+
+## Table of Contents ##
+* [Part 1 - PyBank](https://github.com/adriana-icasiano/python-challenge#Part-1---PyBank)
+* [Analysis](https://github.com/adriana-icasiano/Excel-challenge#Analysis)
+* [Data Limitation](https://github.com/adriana-icasiano/Excel-challenge#Data-Limitation)
+* [Additional Tables and Graphs](https://github.com/adriana-icasiano/Excel-challenge#Additional-tables-graphs)
+* [Bonus Statistical](https://github.com/adriana-icasiano/Excel-challenge#Bonus-Statistical)
+
 # Part 1 - PyBank #
 Students are tasked with creating a Python script for analyzing the financial records of your company based on a set of financial data called [budget_data.csv](https://github.com/adriana-icasiano/python-challenge/blob/9b7a19e581d6dfd9c6897b94bce1d91c497227a7/PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. Students are asked to 
 
