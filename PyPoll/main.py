@@ -26,11 +26,11 @@ with open(csvpath) as csvfile:
     otooley_v = 0
     win_v = 0
     win_name = 0
-    
+      
     # Read each row of data after the header
     for row in csvreader:
         if row[2] == "Khan":
-            khan_v = khan_v + 1
+            khan_v = khan_v +1
         if khan_v > win_v:
             win_v = khan_v
             win_name = row [2]
@@ -42,7 +42,7 @@ with open(csvpath) as csvfile:
         if row[2] == "Li":
             li_v = li_v + 1
         if li_v > win_v:
-            win_v = Li_v
+            win_v = li_v
             win_name = row [2]
         if row[2] == "O'Tooley":
             otooley_v = otooley_v +1
