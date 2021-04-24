@@ -6,8 +6,8 @@ Homework 3 Python Challenge
 * [Summary of Codes Used - PyBank](https://github.com/adriana-icasiano/python-challenge#Summary-of-Codes-Used---PyBank)
 * [Screenshot of Terminal- PyBank](https://github.com/adriana-icasiano/python-challenge#Screenshot-of-Terminal---PyBank)
 * [Part 2 - PyPoll](https://github.com/adriana-icasiano/python-challenge#Part-2---PyPoll)
-* [Summary of Codes Used - PyPoll](https://github.com/adriana-icasiano/python-challenge#Summary-of-Codes-Used--PyPoll)
-* [Screenshot of Terminal - PyPoll](https://github.com/adriana-icasiano/python-challenge#Screenshot-of-Terminal--PyPoll)
+* [Summary of Codes Used - PyPoll](https://github.com/adriana-icasiano/python-challenge#Summary-of-Codes-Used---PyPoll)
+* [Screenshot of Terminal - PyPoll](https://github.com/adriana-icasiano/python-challenge#Screenshot-of-Terminal---PyPoll)
 
 # Part 1 - PyBank #
 Students are tasked with creating a Python script for analyzing the financial records of your company based on a set of financial data called [budget_data.csv](https://github.com/adriana-icasiano/python-challenge/blob/9b7a19e581d6dfd9c6897b94bce1d91c497227a7/PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. 
