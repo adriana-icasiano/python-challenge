@@ -3,29 +3,16 @@ Homework 3 Python Challenge
 
 ## Table of Contents ##
 * [Part 1 - PyBank](https://github.com/adriana-icasiano/python-challenge#Part-1---PyBank)
-* [Analysis](https://github.com/adriana-icasiano/Excel-challenge#Analysis)
-* [Data Limitation](https://github.com/adriana-icasiano/Excel-challenge#Data-Limitation)
-* [Additional Tables and Graphs](https://github.com/adriana-icasiano/Excel-challenge#Additional-tables-graphs)
-* [Bonus Statistical](https://github.com/adriana-icasiano/Excel-challenge#Bonus-Statistical)
+* [Summary of Codes Used - PyBank](https://github.com/adriana-icasiano/python-challenge#Summary-of-Codes-Used---PyBank)
+* [Screenshot of Terminal- PyBank](https://github.com/adriana-icasiano/python-challenge#Screenshot-of-Terminal---PyBank)
+* [Part 2 - PyPoll](https://github.com/adriana-icasiano/python-challenge#Part-2---PyPoll)
+* [Summary of Codes Used - PyPoll](https://github.com/adriana-icasiano/python-challenge#Summary-of-Codes-Used--PyPoll)
+* [Screenshot of Terminal - PyPoll](https://github.com/adriana-icasiano/python-challenge#Screenshot-of-Terminal--PyPoll)
 
 # Part 1 - PyBank #
 Students are tasked with creating a Python script for analyzing the financial records of your company based on a set of financial data called [budget_data.csv](https://github.com/adriana-icasiano/python-challenge/blob/9b7a19e581d6dfd9c6897b94bce1d91c497227a7/PyBank/Resources/budget_data.csv). The dataset is composed of two columns: `Date` and `Profit/Losses`. Students are asked to 
 
-* Ccreate a Python script that analyzes the records to calculate each of the following:
-
-  * The total number of months included in the dataset
-
-  * The net total amount of "Profit/Losses" over the entire period
-
-  * Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
-
-  * The greatest increase in profits (date and amount) over the entire period
-
-  * The greatest decrease in losses (date and amount) over the entire period
-
-* In addition, the final script should both print the analysis to the terminal and export a text file with the results.
-
-# Summary of Codes Used #
+# Summary of Codes Used - PyBank #
 * import os and csv libaries, using the path module, and join function to read csv file
 * with open to read csv file
 * for loops to iterate to the csv data
@@ -36,7 +23,7 @@ Students are tasked with creating a Python script for analyzing the financial re
 * text_file.write() to write into csv file
 * print() to print on terminal
 
-# Screenshot of Terminal #
+# Screenshot of Terminal - PyBank #
 ![](https://github.com/adriana-icasiano/python-challenge/blob/131ba25dcb4c58bce8229fb7524a0513170b9b45/PyBank/Images/solved_terminal_pybank.PNG)
 
 
@@ -56,7 +43,7 @@ Students are tasked with helping a small, rural town modernize its vote counting
 
 * In addition, the final script should both print the analysis to the terminal and export a text file with the results.
 
-# Summary of Codes Used #
+# Summary of Codes Used - PyPoll #
 * import os and csv libaries, using the path module, and join function to read csv file
 * with open to read csv file
 * for loops to iterate to the csv data
@@ -65,5 +52,5 @@ Students are tasked with helping a small, rural town modernize its vote counting
 * text_file.write() to write into csv file
 * print() to print on terminal
 
-# Screenshot of Terminal #
+# Screenshot of Terminal - PyPoll #
 ![](https://github.com/adriana-icasiano/python-challenge/blob/de3d65b0651d3da6da167636094f7d599bc84982/PyPoll/Images/solution_terminal_pypoll.PNG)
