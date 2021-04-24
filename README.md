@@ -17,4 +17,15 @@ Students are tasked with creating a Python script for analyzing the financial re
 
 * In addition, the final script should both print the analysis to the terminal and export a text file with the results.
 
-## PyPoll
+# Summary of Codes Used #
+* import os and csv libaries, using the path module, and join function to read csv file
+* with open to read csv file
+* for loops to iterate to the csv data
+* dictionary to store month, P&L and P&L change data
+* len() 
+* variables to track various financial values of interest
+* with open to write text file
+* text_file.write() to write into csv file
+* print() to print on terminal
+
+# Part 2 - PyPoll #
