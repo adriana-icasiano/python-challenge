@@ -52,9 +52,7 @@ Students are tasked with helping a small, rural town modernize its vote counting
 * import os and csv libaries, using the path module, and join function to read csv file
 * with open to read csv file
 * for loops to iterate to the csv data
-* dictionary to store month, P&L and P&L change data
-* len() 
-* variables to track various financial values of interest
+* variables to track total votes, winner, candidate votes
 * with open to write text file
 * text_file.write() to write into csv file
 * print() to print on terminal
