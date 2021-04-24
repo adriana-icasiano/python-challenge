@@ -28,7 +28,7 @@ Students are tasked with creating a Python script for analyzing the financial re
 * text_file.write() to write into csv file
 * print() to print on terminal
 
-# Screenshot of Terminal#
+# Screenshot of Terminal #
 ![](https://github.com/adriana-icasiano/python-challenge/blob/131ba25dcb4c58bce8229fb7524a0513170b9b45/PyBank/Images/solved_terminal_pybank.PNG)
 
 
